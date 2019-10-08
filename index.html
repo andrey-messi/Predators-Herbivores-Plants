@@ -11,14 +11,24 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
     </script>
+    <style>
+    #webgl-content-overridden {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+        transform: none;
+    }
+    </style>
   </head>
   <body>
-    <div class="webgl-content">
+    <div><a href="Тестовое_Unity.html">Task description</a></div>
+    <div class="webgl-content" id="webgl-content-overridden">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Predators-Mammals-Plants</div>
+        <div class="title">Predators-Herbivores-Plants</div>
       </div>
     </div>
   </body>
